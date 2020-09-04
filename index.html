@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <!-- Fin del Bootstrap -->
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=Bowlby+One+SC&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="centrar-navegacion">
+                <!-- Barra de Navegacion -->
+                <nav class="navbar navbar-expand-sm ">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <img src="img/logo.jpg" alt="" />
+                        <h1>Cubomania</h1>
+                    </div>
+                    <!-- Fin del Logo -->
+                    <!-- Boton de collapso -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon toggler"></span>
+                    </button>
+                    <!-- Enlaces -->
+                    <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                        <div class="navbar-nav navegacion">
+                            <div class="nav-item">
+                                <a href="/" class="nav-link">Inicio</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="catalogo.html" class="nav-link">Catalogo</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="diversion.html" class="nav-link">Diversion</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="historia.html" class="nav-link">Historia</a>
+                            </div>
+                           
+                        </div>
+                </nav>
+                <!-- Fin de barra de navegacion -->
+            </div>
+        </div>
+    </header>
+    <!-- Fin del Header -->
+    <!-- Seccion principal -->
+    <section>
+        <div class="container">
+            <h2 class="centrar-texto">Aprende a armar un cubo rubik!</h2>
+            <p>Para armar un cubo rubik se requiere de perspicacia y paciencia ya que el metodo que veremos consta
+                de algoritmos ya estructurados y de patrones que debemos darnos cuenta para poder aplicarlos. No te
+                asustes es facil y explicaremos todo paso a paso para que puedas armar tu primer cubo rubik!</p>
+            <h3 class="centrar-texto">Notaciones</h3>
+            <p>Para empezar debemos ver una notaciones para poder hablar todos el "mismo idioma" y facilitar el
+                seguimiento del mismo</p>
+            <p>Las letras son parte clave de la notacion, con una letra nos referiremos a una cara del cubo. Cuando esa
+                letra aparezca en algun algorirmo significa que debemos hacer un giro en sentido horario de esa cara,
+                luego si la letra aparece con un apostrofe ( ' ) entonces el giro es antiorario</p>
+            <div class="row">
+                <div class="col-md centrarv">
+                    <ul>
+                        <li>F - Cara delantera, Front en ingles</li>
+                        <li>U - Cara superior, Up en ingles</li>
+                        <li>B - Cara trasera, Back en ingles</li>
+                        <li>D - Cara inferior, Down en ingles</li>
+                        <li>L - Cara lateral izquierda, Left en ingles</li>
+                        <li>R - Cara lateral derecha, Righ en ingles</li>
+                    </ul>
+                </div>
+                <div class="col-md flex centrarh">
+                    <img src="img/notaciones.png" alt="notaciones_del_cubo">
+                </div>
+            </div>
+
+            <h3 class="centrar-texto">Resolucion</h3>
+            <p>Lo primero a observar es que todas las piezas centrales estan fijas, son el eje de nuestro cubo, por eso
+                podemos hacer cualquier movimiento y ellas nunca cambiaran de posicion. Las piezas laterales constan de
+                dos colores, cada cara tiene 4 piezas laterales.</p>
+            <p>Una vez sabido eso podemos empezar con el primer paso elegiremos un color, el que mas te guste, luego
+                debemos usar un poco la intuicion y lograr crear una cruz como muestra la siguiente imagen</p>
+            <div class="flex centrarh">
+                <img src="img/cruz-cubo.jpg" alt="cruz-cubo">
+            </div>
+            <p>Debemos colocar todas la piezas laterales en su cara, ya que es el primer paso y el cubo esta desarmado ,
+                no existe un patro, es mas observar el cubo y fijarse como pueden subir hasta su lugar esa pieza, lo que
+                si podemos analizar son 3 casos particulares para hacerlo mas facil</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contenedor-algoritmos mx-auto d-bloc">
+                        <img src="img/caso_cruz_1.png" alt="">
+                        <p>u' r' u f'</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contenedor-algoritmos mx-auto d-bloc">
+                        <img src="img/caso_cruz_2.png" alt="">
+                        <p>F' R' D' R F2</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contenedor-algoritmos mx-auto d-bloc">
+                        <img src="img/caso_cruz_3.png" alt="">
+                        <p>R' D' R F2</p>
+                    </div>
+                </div>
+            </div>
+            <p>Una vez obtenida la cruz, es tiempo de completar nuestra primera cara, si nos fijamos bien lo que nos
+                faltan son las esquinas, las esquinas se particularizan por ser una pieza que tiene 3 caras, solo hay 8
+                de ellas en nuestro cubo, eso quiere decir que una vez que completemos esta cara la mitad de ellas ya
+                estaran en su lugar!</p>
+            <p>Para colocar una esquina en su lugar debemos posicionar la pieza deseada en la posicion que muestra la
+                imagen a continuacion </p>
+            <div class="contenedor-algoritmos mx-auto d-bloc">
+                <img src="img/esquina_demostracion.png" alt="cubo posicion de esquina">
+            </div>
+            <p>Como la esquina tiene 3 colores, entonces tenemos 3 patrones diferentes. La primera imagen corresponde al
+                caso ideal, cuando el color que queremos armar esta en nuestra capa delantera, el segundo caso que
+                tambien es sencillo es cuando el color que queremos armar esta en nuestra cara derecha y por ultimo el
+                mas rebuscado es cuando esta en la cara inferior</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contenedor-algoritmos mx-auto d-bloc">
+                        <img src="img/esquina_c1.png" alt="">
+                        <p>f d f'</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contenedor-algoritmos mx-auto d-bloc">
+                        <img src="img/esquina_c2.png" alt="">
+                        <p>r' d' r</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contenedor-algoritmos mx-auto d-bloc">
+                        <img src="img/esquina_c3.png" alt="">
+                        <p>R' d2 r d r' d' r</p>
+                    </div>
+                </div>
+            </div>
+            <p>Si ninguno de estos 3 casos ocurre debemos usar la intuicion para colocar la pieza alli, o si una esquina
+                esta en su lugar pero mal orientada(por ejemplo tomemos el caso de la imagen, tenemos la esquina en su
+                lugar pero el naranja esta arriba) efectuamos cualquiera de los pasos para bajar la pieza y luego vemos
+                que caso hay que realizar</p>
+            <p>Listo su primera cara del cubo rubick esta completa y bien orientada. Ahora es momento de girar el cubo y
+                ver la cara amarilla, ahora lo que debemos hacer es la linea del medio, es decir la capa central. Es el
+                momento de trabajar con las piezas laterales (las que tienen dos colores), tenemos dos casos, el primero
+                es buscar una pieza lateral que concida con el color del centro de la cara del frente y el color que
+                tiene arriba corresponde al color de la cara de su izquierda, el segundo caso es lo mismo pero el color
+                de arriba corresponde al color de la cara de la derecha </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contenedor-algoritmos mx-auto d-bloc">
+                        <img src="img/capa_central_1.png" alt="">
+                        <p> U' L' U L U F U' F'</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contenedor-algoritmos mx-auto d-bloc">
+                        <img src="img/capa_central_2.png" alt="">
+                        <p>U R U' R' U' F' U F</p>
+                    </div>
+                </div>
+            </div>
+            <p>Un ultimo caso para esta capa es cuando tenemos la pieza en su lugar pero esta mal orientada, para ello
+                aplicamos el algoritmo dos veces y se ordenara</p>
+            <div class="contenedor-algoritmos mx-auto d-bloc">
+                <img src="img/capa_central_3.png" alt="">
+                <p>(U R U' R' U' F' U F) * 2</p>
+            </div>
+            <p>Listo! solo nos queda por orientar nuestra ultima capa, para ello al igual que el principio debemos hacer
+                una cruz, pero cuidado esta vez debemos hacerla sin perder nada de lo anterior, para ello tambien hay un
+                algoritmo que debemos repetir una cierta cantidad de veces dependiendo el patron que tengamos. Si solo
+                tenemos un punto hacemos el algoritmo para obtener el siguiente patron, luego una vez que obtenemos es
+                patron haremos de nuevo el algoritmo para obtener el siguiente (la linea) y luego una ultima vez para
+                obtener la cruz.</p>
+            <div class="row">
+                <div class="col-lg">
+
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="contenedor-algoritmos mx-auto d-bloc">
+                                <img src="img/cruz_sup_1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="contenedor-algoritmos mx-auto d-bloc">
+                                <img src="img/cruz_sup_2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="contenedor-algoritmos mx-auto d-bloc">
+                                <img src="img/cruz_sup_3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="contenedor-algoritmos mx-auto d-bloc">
+                                <img src="img/cruz_sup_4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor-algoritmos mx-auto d-bloc">
+                <p>F R U R' U' F'</p>
+            </div>
+            <p>Si tenemos suerte la cruz saldra a la primera, pero si no ya sabremos el patron y podemos llegar a la
+                cruz</p>
+            <p>Ahora tenemos nuestros laterales bien posicionados pero nos falta orientarlos bien, para ello te mostrare
+                un algoritmo para intercambiar dos laterales sin modificar el resto, realizandolo por lo menos una vez
+                nos aseguramos que almenos una pieza este en su lugar</p>
+            <div class="contenedor-algoritmos mx-auto d-bloc">
+                <img src="img/capa_superior_lateral.png" alt="">
+                <p>R U R' U R U2 R' U</p>
+            </div>
+            <p>El chiste de este algoritmo es que vayamos viendo los laterales que podemos intercambiar hasta que nos
+                queden todos orientados</p>
+            <p>Solo nos queda el ultimo paso para terminar nuestro cubo, acomodar las esquinas. Primero realizaremos un
+                patron para dejarlas en su lugar pero esto no asegura que estan orientadas. El patron intercambia entre
+                tres esquinas y una la deja fija, la idea es fijarse si tenemos una que este bien colocada y mover el
+                resto</p>
+            <div class="contenedor-algoritmos mx-auto d-bloc">
+                <img src="img/ultimas_esquinas_p.png" alt="">
+                <p>U R U' L' U R' U' L</p>
+            </div>
+            <p>Ahora solo queda orientar las esquinas de la ultima capa, realizaremos un algoritmo varias veces hasta
+                que esta esquina este orientada luego giramos la capa superior hasta poner otra esquina no orientada en
+                la posicion de la imagen y repetimos el patron otra vez las veces necesarias para orientarlo. En este
+                paso el cubo se desarma pero te aseguro que cuando todas las esquinas esten orientadas el cubo quedara
+                completo y habras terminado tu primer cubo rubik!</p>
+
+            <div class="contenedor-algoritmos mx-auto d-bloc">
+                <img src="img/orientacion_esquinas_sup.png" alt="">
+                <p>R' D' R D</p>
+            </div>
+
+            <p>Una curiosidad de este patron, si se realiza 6 veces el cubo vuelve al mismo estado. Listo tu primer cubo
+                esta listo, ahora solo queda practicar armarlo varias veces hasta que ya lo domines.</p>
+            <p>Si aun no tienes un cubo bueno o quieres subir la dificultad puedes visitar nuestro <strong><a
+                        href="catalogo.html">catalogo</a></strong>
+                o si ya tienes uno y quieres ver unos patrones alocados entre en <strong><a
+                        href="diversion.html">diversion</a></strong></p>
+        </div>
+    </section>
+    <!-- Fin de Seccion principal -->
+
+    <!-- footer -->
+    <footer class="footer-site">
+
+        <div class="container">
+            <p class="centrar-texto">Todos los derechos reservados</p>
+        </div>
+    </footer>
+    <!-- fin del footer -->
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- Fin bootstrap script -->
+</body>
+
+</html>

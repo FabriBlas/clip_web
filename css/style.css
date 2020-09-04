@@ -1,0 +1,139 @@
+/* Globales */
+body{
+    font-family: 'Arsenal', sans-serif;
+    font-size: 20px;
+}
+h1,h2,h3,h4 {
+    font-family: 'Bowlby One SC', cursive;
+}
+.centrar-texto{
+    text-align:center;
+}
+img{
+    width: 100%;
+    max-width: 330px;  
+}
+.flex{
+    display: flex;
+}
+.centrarv{
+    margin: auto 0;
+}
+.centrarh{
+    justify-content: center;
+}
+.margen_titulo{
+    margin-top: 30px;
+}
+
+/* logo */
+.logo{
+    text-align: left;
+}
+.logo img {
+    max-width: 200px;
+    width: 50%;
+}
+
+.logo h1 {
+    display: none;
+}
+@media (min-width: 1280px) {
+    .logo{
+        text-align: center;
+        margin: 30px;
+    }
+    .logo h1{
+        display: block;
+    }
+}
+
+.toggler {
+    background-color: red;
+}
+
+/* navegacion */
+
+@media (min-width: 1280px) {
+    .navbar {
+        display: inline-block;
+    }
+}
+
+.nav-link {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        margin: 0 0 0 auto;
+    }
+    .nav-item {
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .navegacion{
+        margin: 0 auto;
+    }
+    .nav-item {
+        padding: 0 60px;
+        border: solid 1px rgb(224, 219, 219);
+    }
+    .nav-link{
+        padding: 0 0;
+    }
+}
+.centrar-navegacion{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* notaciones */
+
+.notaciones{
+    margin: auto 0;
+}
+/* algoritmos */
+
+.contenedor-algoritmos{
+    display: block;
+    max-width: 220px;
+}
+.contenedor-algoritmos p{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* footer */
+.footer-site{
+    background-color: #f4f4f4;
+    padding: 20px;
+    color: gray;
+}
+
+/* catalogo */
+
+.cubo-imagen{
+    display: block;
+    text-align: center;
+    max-width: 100px;
+    
+}
+
+/* boton */
+
+.btn{
+    padding: 10px 50px;
+    margin-bottom: 50px ;
+    font-size: 20px;
+}
+
+/* Cronometro */
+
+.cronometro .numero{
+    font-size: 100px;
+    font-family: 'Bowlby One SC', cursive;
+}

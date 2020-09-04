@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <!-- Fin del Bootstrap -->
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=Bowlby+One+SC&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="centrar-navegacion">
+                <!-- Barra de Navegacion -->
+                <nav class="navbar navbar-expand-sm ">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <img src="img/logo.jpg" alt="" />
+                        <h1>Cubomania</h1>
+                    </div>
+                    <!-- Fin del Logo -->
+                    <!-- Boton de collapso -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon toggler"></span>
+                    </button>
+                    <!-- Enlaces -->
+                    <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                        <div class="navbar-nav navegacion">
+                            <div class="nav-item">
+                                <a href="/" class="nav-link">Inicio</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="catalogo.html" class="nav-link">Catalogo</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="diversion.html" class="nav-link">Diversion</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="historia.html" class="nav-link">Historia</a>
+                            </div>
+
+                        </div>
+                </nav>
+                <!-- Fin de barra de navegacion -->
+            </div>
+        </div>
+    </header>
+    <!-- Fin del Header -->
+
+    <div class="container">
+        <h1 class="centrar-texto">Algunos patrones curiosos</h1>
+        <section>
+            <p>Existen algunos algoritmos muy curiosos en el cubo que pueden llegar a formar figuras no aportan nada a
+                la resolucion del mismo pero quizas puedas sorprender a tus amigos con ellos! A continuacion te dejamos
+                lista con los mejores patrones para nosotros, disfrutalos!</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contenedor-algoritmos mx-auto d-bloc">
+                        <h4 class="centrar-texto">Tablero de ajedrez fácil</h4>
+                        <img src="img/p1.png" alt="">
+                        <p>U2 D2 F2 B2 L2 R2</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contenedor-algoritmos mx-auto d-bloc">
+                        <h4 class="centrar-texto">Más menos</h4>
+                        <img src="img/p2.png" alt="">
+                        <p>U2 R2 L2 U2 R2 L2</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contenedor-algoritmos mx-auto d-bloc">
+                        <h4 class="centrar-texto">Rayas verticales</h4>
+                        <img src="img/p3.png" alt="">
+                        <p>F U F R L2 B D' R D2 L D' B R2 L F U F</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contenedor-algoritmos mx-auto d-bloc">
+                        <h4 class="centrar-texto">Cruz</h4>
+                        <img src="img/p4.png" alt="">
+                        <p>R2 L' D F2 R' D' R' L U' D R D B2 R' U D2</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contenedor-algoritmos mx-auto d-bloc">
+                        <h4 class="centrar-texto"> Cubo en cubo</h4>
+                        <img src="img/p5.png" alt="">
+                        <p>F L F U' R U F2 L2 U' L' B D' B' L2 U</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contenedor-algoritmos mx-auto d-bloc">
+                        <h4 class="centrar-texto">Cubo en cubo en cubo</h4>
+                        <img src="img/p6.png" alt="">
+                        <p>U' L' U' F' R2 B' R F U B2 U B' L U' F U R F'</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contenedor-algoritmos mx-auto d-bloc">
+                        <h4 class="centrar-texto"> Cuatro puntos</h4>
+                        <img src="img/p7.png" alt="">
+                        <p>F2 B2 U D' R2 L2 U D'</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contenedor-algoritmos mx-auto d-bloc">
+                        <h4 class="centrar-texto">Seis puntos</h4>
+                        <img src="img/p8.png" alt="">
+                        <p>U D' R L' F B' U D'</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <section>
+            <h2 class="centrar-texto">Adivinanza</h1>
+                <div class="adivinanza centrar-texto">
+                    <p>A esta altura ya estas familiarizado con un cubo rubik entonces te planteo la siguiente pregunta
+                    </p>
+                    <p>Cuantas piezas laterales hay ?</p>
+                    <div class="form-group">
+                        <input id="respuesta" type="number" class="form-control" required>
+                    </div>
+                    <p>Intentos disponibles <strong id="inte">4</strong></p>
+                    <input onclick="checkear();" type="submit" class="btn btn-primary" value="Responder">
+                </div>
+        </section>
+    </div>
+    <!-- footer -->
+    <footer class="footer-site">
+
+        <div class="container">
+            <p class="centrar-texto">Todos los derechos reservados</p>
+        </div>
+    </footer>
+    <!-- fin del footer -->
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- Fin bootstrap script -->
+
+    <script>
+        var intentos = 4;
+        var res_box = document.getElementById("respuesta");
+        var inte = document.getElementById("inte");
+
+        function checkear() {
+            if (res_box.value == 12) {
+                alert("FELECIDADES ACERTASTE");
+                intentos = 4;
+                inte.innerHTML = intentos;
+                return;
+            }
+            else {
+                intentos--;
+                inte.innerHTML = intentos;
+                if (intentos == 0) {
+                    alert("Lo siento, perdiste :C");
+                    intentos = 4;
+                    inte.innerHTML = intentos;
+                    return
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>
